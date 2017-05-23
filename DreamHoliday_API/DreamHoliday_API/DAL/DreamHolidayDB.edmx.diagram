@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd64833264b941e3a9a9b2ee2fc3fe2a" Name="Diagram1">
+        <EntityTypeShape EntityType="DreamHollidayModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.AspNetRoles" Width="1.5" PointX="9.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.AspNetUserClaims" Width="1.5" PointX="14.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.AspNetUserLogins" Width="1.5" PointX="14.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.AspNetUsers" Width="1.5" PointX="12" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.BIEN" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.COMMENTAIRE" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.LOCATION" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.MEMBRE" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.MESSAGE" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.NOTE" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.OPTIONS" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.PIECE" Width="1.5" PointX="5.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DreamHollidayModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="DreamHollidayModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.FK_BIEN_MEMBRE" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.FK_LOCATION_BIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.FK_OPTIONS_BIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.FK_PIECE_BIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.FK_COMMENTAIRE_LOCATION" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.FK_LOCATION_MEMBRE" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.FK_NOTE_LOCATION" ManuallyRouted="false" />
+        <AssociationConnector Association="DreamHollidayModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
