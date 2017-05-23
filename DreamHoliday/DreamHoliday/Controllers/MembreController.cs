@@ -285,8 +285,8 @@ namespace DreamHoliday.Controllers
             editProfile moi = new editProfile();
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:52858/api/BienAPI/");
-                var responseTask = client.GetAsync("GetMembreByIdForProfile");
+                client.BaseAddress = new Uri("http://localhost:52858/api/MembreAPI/");
+                var responseTask = client.GetAsync("GetMembreByIdForProfile?idMembre="+idMembre);
                 responseTask.Wait();
                 var result = responseTask.Result;
                 if (result.IsSuccessStatusCode)

@@ -44,7 +44,7 @@
                         </div>
                         <ul class="nav navbar-nav col-md-4">
                             <li>@Html.ActionLink(Resource.btnContact, "Contact", "Home", new { area = "" }, null)</li>
-                            <li>@Html.ActionLink(Resource.btnLesBiens, "BigSearchBien", "Bien", new { area = "" }, null)</li>
+                            <li>@Html.ActionLink(Resource.nosBiens, "BigSearchBien", "Bien", new { area = "" }, null)</li>
                         </ul>
                         <ul class="nav navbar-nav  col-md-4" style="float:right">
                             <li>@Html.ActionLink( Resource.btnMonProfil, "VoirMonProfile", "Membre", new { area = "" }, null)</li>
@@ -68,18 +68,20 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="nav navbar-nav col-md-7">
+                        <ul class="nav navbar-nav col-md-4">
                             <li style="text-align:center" class="col-md-3">@Html.ActionLink(Resource.btnContact, "Contact", "Home", new { area = "" }, null)</li>
-                            <li style="text-align:center" class="col-md-3">@Html.ActionLink(Resource.btnNvBien, "BigSearchBien", "Bien", new { area = "" }, null)</li>
+                            <li style="text-align:center" class="col-md-3">@Html.ActionLink(Resource.nosBiens, "BigSearchBien", "Bien", new { area = "" }, null)</li>
                         
-                            <li style="text-align:center" class="col-md-3">@Html.ActionLink(Resource.btnNvMembre, "InsertNewMembre", "Membre", new { area = "" }, null)</li>
-                            <li style="text-align:center" class="col-md-3">@Html.ActionLink(Resource.btnConnect, "connection", "Compte", new { area = "" }, null)</li>
+                            
                          </ul>
-                        <ul class="nav navbar-nav  col-md-2" style="float:right">
-                            <li  style="text-align:center">
+                        <ul class="nav navbar-nav  col-md-4" style="float:right">
+                            <li>@Html.ActionLink(Resource.btnMonProfil, "InsertNewMembre", "Membre", new { area = "" }, null)</li>
+                            <li>@Html.ActionLink(@Resource.btnDeconnect, "connection", "Compte", new { area = "" }, null)</li>
+
+                            <li>
                                 @Html.ActionLink("FR", "SetCulture", "Home", new { culture = "fr" }, new { @style = (culture == "fr" ? sColorSelected : "") })
                             </li>
-                            <li  style="text-align:center">
+                            <li>
                                 @Html.ActionLink("EN", "SetCulture", "Home", new { culture = "en" }, new { @style = (culture == "en" ? sColorSelected : "") })
                             </li>
                         </ul>

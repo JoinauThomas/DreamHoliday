@@ -450,4 +450,7 @@ Nous permettons aux propriétaires de mettre leur bien en location en toute séc
   <data name="wifi" xml:space="preserve">
     <value>wifi</value>
   </data>
+  <data name="nosBiens" xml:space="preserve">
+    <value>nos biens</value>
+  </data>
 </root>

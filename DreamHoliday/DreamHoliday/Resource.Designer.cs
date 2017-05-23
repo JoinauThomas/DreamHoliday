@@ -703,6 +703,15 @@ namespace DreamHoliday {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à nos biens.
+        /// </summary>
+        public static string nosBiens {
+            get {
+                return ResourceManager.GetString("nosBiens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à note moyenne.
         /// </summary>
         public static string noteMoyenne {

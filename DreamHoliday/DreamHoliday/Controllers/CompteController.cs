@@ -21,6 +21,8 @@ namespace DreamHoliday.Controllers
         [HttpPost]
         public ActionResult connection(string userName, string Password)
         {
+            var MyToken = "";
+
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://localhost:52858");
@@ -49,34 +51,25 @@ namespace DreamHoliday.Controllers
                     responseString.Wait();
                     //get access token from response body
                     var jObject = JObject.Parse(responseString.Result);
-                    string access_token = jObject.GetValue("access_token").ToString();
-
-                    Membre moi = new Membre();
-
-                    using (var client2 = new HttpClient())
-                    {
-                        client2.BaseAddress = new Uri("http://localhost:52858/api/BienAPI/");
-                        var responseTask2 = client2.GetAsync("GetAllBiens");
-                        responseTask2.Wait();
-                        result = responseTask.Result;
-                        if (result.IsSuccessStatusCode)
-                        {
-                            var readTask = result.Content.ReadAsAsync<Membre>();
-                            readTask.Wait();
-                            moi = readTask.Result;
-                        }
-                    }
-                    //////// test avec Cookies//////////
-                    //HttpCookie monToken = new HttpCookie("myToken");
-                    //monToken["monToken"] = access_token;
-                    //Response.Cookies.Add(monToken);
-
-                    // recupération du token en Session
-                    Session["monToken"] = access_token;
-                    Session["monCompte"] = moi;
-                    return RedirectToAction("Index", "Home");
+                    MyToken = jObject.GetValue("access_token").ToString();
                 }
             }
+
+
+            Membre moi = new Membre();
+
+            moi = DreamHoliday.Controllers.MembreController.GetMembreByMail(userName);
+            //////// test avec Cookies//////////
+            //HttpCookie monToken = new HttpCookie("myToken");
+            //monToken["monToken"] = access_token;
+            //Response.Cookies.Add(monToken);
+
+            // recupération du token en Session
+            Session["monToken"] = MyToken;
+            Session["monCompte"] = moi;
+            return RedirectToAction("Index", "Home");
+
+
         }
 
         public ActionResult deconnexion()
