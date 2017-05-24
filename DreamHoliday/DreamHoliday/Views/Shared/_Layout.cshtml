@@ -61,22 +61,22 @@
                 else
                 {
                     <div class="navbar-default">
-                        <div class="navbar-header">
-                            <ul class="navbar-brand nav col-md-1">
+                        <div class="navbar-header col-md-1">
+                            <ul class="navbar-brand nav ">
                                 <li >
                                     <button type="button" class="glyphicon glyphicon-home" style="background-color:transparent; border:none" onclick="location.href = '@Url.Action("Index", "Home")'"></button>
                                 </li>
                             </ul>
                         </div>
-                        <ul class="nav navbar-nav col-md-4">
-                            <li style="text-align:center" class="col-md-3">@Html.ActionLink(Resource.btnContact, "Contact", "Home", new { area = "" }, null)</li>
-                            <li style="text-align:center" class="col-md-3">@Html.ActionLink(Resource.nosBiens, "BigSearchBien", "Bien", new { area = "" }, null)</li>
+                        <ul class="nav navbar-nav col-md-4 ">
+                            <li style="text-align:center" ">@Html.ActionLink(Resource.btnContact, "Contact", "Home", new { area = "" }, null)</li>
+                            <li style="text-align:center"">@Html.ActionLink(Resource.nosBiens, "BigSearchBien", "Bien", new { area = "" }, null)</li>
                         
                             
                          </ul>
-                        <ul class="nav navbar-nav  col-md-4" style="float:right">
-                            <li>@Html.ActionLink(Resource.btnMonProfil, "InsertNewMembre", "Membre", new { area = "" }, null)</li>
-                            <li>@Html.ActionLink(@Resource.btnDeconnect, "connection", "Compte", new { area = "" }, null)</li>
+                        <ul class="nav navbar-nav col-md-push-3  col-md-4">
+                            <li>@Html.ActionLink(Resource.btnNvMembre, "InsertNewMembre", "Membre", new { area = "" }, null)</li>
+                            <li>@Html.ActionLink(@Resource.btnConnect, "connection", "Compte", new { area = "" }, null)</li>
 
                             <li>
                                 @Html.ActionLink("FR", "SetCulture", "Home", new { culture = "fr" }, new { @style = (culture == "fr" ? sColorSelected : "") })

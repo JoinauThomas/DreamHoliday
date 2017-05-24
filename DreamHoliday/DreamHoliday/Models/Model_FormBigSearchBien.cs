@@ -14,7 +14,7 @@ namespace DreamHoliday.Models
         [Display(Name = "tarif par nuit")]
         public int tarifParNuit { get; set; }
         [Display(Name = "note moyenne")]
-        public decimal noteMoyenne { get; set; }
+        public double noteMoyenne { get; set; }
         [Display(Name = "nbre de personnes max")]
         public int nbPersonnesMax { get; set; }
 

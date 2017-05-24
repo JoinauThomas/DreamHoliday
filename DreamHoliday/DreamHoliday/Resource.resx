@@ -453,4 +453,16 @@ Nous permettons aux propriétaires de mettre leur bien en location en toute séc
   <data name="nosBiens" xml:space="preserve">
     <value>nos biens</value>
   </data>
+  <data name="dateDeDepart" xml:space="preserve">
+    <value>date de départ</value>
+  </data>
+  <data name="dateEnregistrement" xml:space="preserve">
+    <value>date d'enregistrement</value>
+  </data>
+  <data name="estCommente" xml:space="preserve">
+    <value>est commenté</value>
+  </data>
+  <data name="estNote" xml:space="preserve">
+    <value>est noté</value>
+  </data>
 </root>

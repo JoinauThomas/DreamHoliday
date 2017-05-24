@@ -298,11 +298,29 @@ namespace DreamHoliday {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à date de départ.
+        /// </summary>
+        public static string dateDeDepart {
+            get {
+                return ResourceManager.GetString("dateDeDepart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Date de naissance.
         /// </summary>
         public static string dateDeNaissance {
             get {
                 return ResourceManager.GetString("dateDeNaissance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à date d&apos;enregistrement.
+        /// </summary>
+        public static string dateEnregistrement {
+            get {
+                return ResourceManager.GetString("dateEnregistrement", resourceCulture);
             }
         }
         
@@ -501,6 +519,24 @@ namespace DreamHoliday {
         public static string Error_VilleRequis {
             get {
                 return ResourceManager.GetString("Error_VilleRequis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à est commenté.
+        /// </summary>
+        public static string estCommente {
+            get {
+                return ResourceManager.GetString("estCommente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à est noté.
+        /// </summary>
+        public static string estNote {
+            get {
+                return ResourceManager.GetString("estNote", resourceCulture);
             }
         }
         

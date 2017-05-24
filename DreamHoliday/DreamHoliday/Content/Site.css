@@ -159,10 +159,7 @@ input.checkbox:checked
     border-color: red;
     background-color:blue;
 }
-#table,  th
-{
-    text-align:center;
-}
+
 .navbar-inverses {
     background-color: #18d7f2;
     border-color: #080808;
@@ -237,4 +234,8 @@ input.checkbox:checked
     width:80%;
 }
 
+.tableaux td {
+    vertical-align: central;
+    text-align: center;
+}
 

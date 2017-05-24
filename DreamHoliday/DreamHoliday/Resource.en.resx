@@ -452,4 +452,16 @@ We allow owners to safely rent their property ..</value>
   <data name="nosBiens" xml:space="preserve">
     <value>our properties</value>
   </data>
+  <data name="dateDeDepart" xml:space="preserve">
+    <value>departure date</value>
+  </data>
+  <data name="dateEnregistrement" xml:space="preserve">
+    <value>register date</value>
+  </data>
+  <data name="estCommente" xml:space="preserve">
+    <value>Is commented</value>
+  </data>
+  <data name="estNote" xml:space="preserve">
+    <value>Is noted</value>
+  </data>
 </root>
