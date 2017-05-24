@@ -464,4 +464,10 @@ We allow owners to safely rent their property ..</value>
   <data name="estNote" xml:space="preserve">
     <value>Is noted</value>
   </data>
+  <data name="desole" xml:space="preserve">
+    <value>Sorry</value>
+  </data>
+  <data name="Error_tableVide" xml:space="preserve">
+    <value>We do not have properties that matches your criteria.</value>
+  </data>
 </root>

@@ -246,6 +246,9 @@
     <Compile Include="DAL\BIEN.cs">
       <DependentUpon>DreamHolidayDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\BigSearchBiens_Result.cs">
+      <DependentUpon>DreamHolidayDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAL\COMMENTAIRE.cs">
       <DependentUpon>DreamHolidayDB.tt</DependentUpon>
     </Compile>

@@ -114,11 +114,11 @@ namespace DreamHoliday_API.Controllers
         {
             List<Bien> mesBiensList = new List<Bien>();
             DAL.DreamHollidayEntities dbContext = new DAL.DreamHollidayEntities();
-            List<DAL.searchBienWithOptions_Result> mbiens = new List<DAL.searchBienWithOptions_Result>();
-            mbiens = dbContext.searchBienWithOptions(mesBiens.bbq, mesBiens.piscine, mesBiens.jacuzzi, mesBiens.sauna, 
+            List<DAL.BigSearchBiens_Result> mbiens = new List<DAL.BigSearchBiens_Result>();
+            mbiens = dbContext.BigSearchBiens(mesBiens.bbq, mesBiens.piscine, mesBiens.jacuzzi, mesBiens.sauna, 
                 mesBiens.tv, mesBiens.teleDistribution, mesBiens.wifi, mesBiens.pingpong, mesBiens.tennis, mesBiens.transat, 
                 mesBiens.cuisineEquipee, mesBiens.machineALaver, mesBiens.jardin, mesBiens.parking, mesBiens.salleDeBain, 
-                mesBiens.toilette, mesBiens.chambre, mesBiens.tarifParNuit, mesBiens.paysOuVille, mesBiens.nbPersonnesMax).ToList();
+                mesBiens.toilette, mesBiens.chambre, mesBiens.tarifParNuit, mesBiens.paysOuVille, mesBiens.nbPersonnesMax, (int)mesBiens.noteMoyenne).ToList();
             foreach(var i in mbiens)
             {
                 mesBiensList.Add(new Bien { idBien = (int)i.idBien, idMembre = (int)i.inMembre, pays = i.pays, ville = i.ville, rue = i.rue, numero = i.num, tarifParNuit = (int)i.tarifNuit, tarifNettoyage = (int)i.tarifNett, libelle = i.libelle, noteMoyenne = (double)i.noteM, photo = i.photo, nbPersonnesMax = (int)i.nbPersMax, bbq = (bool)i.bbq, jacuzzi = (bool)i.jacuzzi, jardin = (bool)i.jardin, parking = (bool)i.parking, machineALaver = (bool)i.machineALaver, cuisineEquipee = (bool)i.cuisineEq, pingpong = (bool)i.pingpong, wifi = (bool)i.wifi, sauna = (bool)i.sauna, tv = (bool)i.tv, tennis = (bool)i.tennis, piscine = (bool)i.piscine, teleDistribution = (bool)i.teleDis, transat = (bool)i.transat, chambre = (int)i.chambre, cuisine = (int)i.cuisine, dressing = (int)i.dressing, salleAManger = (int)i.sam, salleDeBain = (int)i.sdb, salon = (int)i.salon, toilette = (int)i.toilette, veranda = (int)i.veranda });

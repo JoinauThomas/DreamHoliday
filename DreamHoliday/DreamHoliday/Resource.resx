@@ -465,4 +465,10 @@ Nous permettons aux propriétaires de mettre leur bien en location en toute séc
   <data name="estNote" xml:space="preserve">
     <value>est noté</value>
   </data>
+  <data name="desole" xml:space="preserve">
+    <value>Desole</value>
+  </data>
+  <data name="Error_tableVide" xml:space="preserve">
+    <value>nous n'avons pas de biens qui correspond à vos critères.</value>
+  </data>
 </root>

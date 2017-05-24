@@ -366,7 +366,7 @@ namespace DreamHoliday_API.DAL
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SearchBiensDispo2_Result>("SearchBiensDispo2", paysOuVilleParameter, arriveeParameter, departParameter, nbPersParameter);
         }
     
-        public virtual ObjectResult<searchBienWithOptions_Result> searchBienWithOptions(Nullable<bool> bbq, Nullable<bool> piscine, Nullable<bool> jacuzzi, Nullable<bool> sauna, Nullable<bool> tv, Nullable<bool> teleDis, Nullable<bool> wifi, Nullable<bool> pingpong, Nullable<bool> tennis, Nullable<bool> transat, Nullable<bool> cuisineEq, Nullable<bool> machineALaver, Nullable<bool> jardin, Nullable<bool> parking, Nullable<int> nbSdb, Nullable<int> nbToilette, Nullable<int> nbChambre, Nullable<int> prixMax, string villeOuPays, Nullable<int> nbPersMax)
+        public virtual ObjectResult<searchBienWithOptions_Result> searchBienWithOptions(Nullable<bool> bbq, Nullable<bool> piscine, Nullable<bool> jacuzzi, Nullable<bool> sauna, Nullable<bool> tv, Nullable<bool> teleDis, Nullable<bool> wifi, Nullable<bool> pingpong, Nullable<bool> tennis, Nullable<bool> transat, Nullable<bool> cuisineEq, Nullable<bool> machineALaver, Nullable<bool> jardin, Nullable<bool> parking, Nullable<int> nbSdb, Nullable<int> nbToilette, Nullable<int> nbChambre, Nullable<int> prixMax, string villeOuPays, Nullable<int> nbPersMax, Nullable<int> noteMoyenneMin)
         {
             var bbqParameter = bbq.HasValue ?
                 new ObjectParameter("bbq", bbq) :
@@ -448,7 +448,11 @@ namespace DreamHoliday_API.DAL
                 new ObjectParameter("nbPersMax", nbPersMax) :
                 new ObjectParameter("nbPersMax", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<searchBienWithOptions_Result>("searchBienWithOptions", bbqParameter, piscineParameter, jacuzziParameter, saunaParameter, tvParameter, teleDisParameter, wifiParameter, pingpongParameter, tennisParameter, transatParameter, cuisineEqParameter, machineALaverParameter, jardinParameter, parkingParameter, nbSdbParameter, nbToiletteParameter, nbChambreParameter, prixMaxParameter, villeOuPaysParameter, nbPersMaxParameter);
+            var noteMoyenneMinParameter = noteMoyenneMin.HasValue ?
+                new ObjectParameter("noteMoyenneMin", noteMoyenneMin) :
+                new ObjectParameter("noteMoyenneMin", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<searchBienWithOptions_Result>("searchBienWithOptions", bbqParameter, piscineParameter, jacuzziParameter, saunaParameter, tvParameter, teleDisParameter, wifiParameter, pingpongParameter, tennisParameter, transatParameter, cuisineEqParameter, machineALaverParameter, jardinParameter, parkingParameter, nbSdbParameter, nbToiletteParameter, nbChambreParameter, prixMaxParameter, villeOuPaysParameter, nbPersMaxParameter, noteMoyenneMinParameter);
         }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
@@ -687,6 +691,95 @@ namespace DreamHoliday_API.DAL
                 new ObjectParameter("dateDepart", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("VerifSiDateEstDispos", idBienParameter, dateArriveeParameter, dateDepartParameter);
+        }
+    
+        public virtual ObjectResult<BigSearchBiens_Result> BigSearchBiens(Nullable<bool> bbq, Nullable<bool> piscine, Nullable<bool> jacuzzi, Nullable<bool> sauna, Nullable<bool> tv, Nullable<bool> teleDis, Nullable<bool> wifi, Nullable<bool> pingpong, Nullable<bool> tennis, Nullable<bool> transat, Nullable<bool> cuisineEq, Nullable<bool> machineALaver, Nullable<bool> jardin, Nullable<bool> parking, Nullable<int> nbSdb, Nullable<int> nbToilette, Nullable<int> nbChambre, Nullable<int> prixMax, string villeOuPays, Nullable<int> nbPersMax, Nullable<int> noteMoyenneMin)
+        {
+            var bbqParameter = bbq.HasValue ?
+                new ObjectParameter("bbq", bbq) :
+                new ObjectParameter("bbq", typeof(bool));
+    
+            var piscineParameter = piscine.HasValue ?
+                new ObjectParameter("piscine", piscine) :
+                new ObjectParameter("piscine", typeof(bool));
+    
+            var jacuzziParameter = jacuzzi.HasValue ?
+                new ObjectParameter("jacuzzi", jacuzzi) :
+                new ObjectParameter("jacuzzi", typeof(bool));
+    
+            var saunaParameter = sauna.HasValue ?
+                new ObjectParameter("sauna", sauna) :
+                new ObjectParameter("sauna", typeof(bool));
+    
+            var tvParameter = tv.HasValue ?
+                new ObjectParameter("tv", tv) :
+                new ObjectParameter("tv", typeof(bool));
+    
+            var teleDisParameter = teleDis.HasValue ?
+                new ObjectParameter("teleDis", teleDis) :
+                new ObjectParameter("teleDis", typeof(bool));
+    
+            var wifiParameter = wifi.HasValue ?
+                new ObjectParameter("wifi", wifi) :
+                new ObjectParameter("wifi", typeof(bool));
+    
+            var pingpongParameter = pingpong.HasValue ?
+                new ObjectParameter("pingpong", pingpong) :
+                new ObjectParameter("pingpong", typeof(bool));
+    
+            var tennisParameter = tennis.HasValue ?
+                new ObjectParameter("tennis", tennis) :
+                new ObjectParameter("tennis", typeof(bool));
+    
+            var transatParameter = transat.HasValue ?
+                new ObjectParameter("transat", transat) :
+                new ObjectParameter("transat", typeof(bool));
+    
+            var cuisineEqParameter = cuisineEq.HasValue ?
+                new ObjectParameter("cuisineEq", cuisineEq) :
+                new ObjectParameter("cuisineEq", typeof(bool));
+    
+            var machineALaverParameter = machineALaver.HasValue ?
+                new ObjectParameter("machineALaver", machineALaver) :
+                new ObjectParameter("machineALaver", typeof(bool));
+    
+            var jardinParameter = jardin.HasValue ?
+                new ObjectParameter("jardin", jardin) :
+                new ObjectParameter("jardin", typeof(bool));
+    
+            var parkingParameter = parking.HasValue ?
+                new ObjectParameter("parking", parking) :
+                new ObjectParameter("parking", typeof(bool));
+    
+            var nbSdbParameter = nbSdb.HasValue ?
+                new ObjectParameter("nbSdb", nbSdb) :
+                new ObjectParameter("nbSdb", typeof(int));
+    
+            var nbToiletteParameter = nbToilette.HasValue ?
+                new ObjectParameter("nbToilette", nbToilette) :
+                new ObjectParameter("nbToilette", typeof(int));
+    
+            var nbChambreParameter = nbChambre.HasValue ?
+                new ObjectParameter("nbChambre", nbChambre) :
+                new ObjectParameter("nbChambre", typeof(int));
+    
+            var prixMaxParameter = prixMax.HasValue ?
+                new ObjectParameter("prixMax", prixMax) :
+                new ObjectParameter("prixMax", typeof(int));
+    
+            var villeOuPaysParameter = villeOuPays != null ?
+                new ObjectParameter("villeOuPays", villeOuPays) :
+                new ObjectParameter("villeOuPays", typeof(string));
+    
+            var nbPersMaxParameter = nbPersMax.HasValue ?
+                new ObjectParameter("nbPersMax", nbPersMax) :
+                new ObjectParameter("nbPersMax", typeof(int));
+    
+            var noteMoyenneMinParameter = noteMoyenneMin.HasValue ?
+                new ObjectParameter("noteMoyenneMin", noteMoyenneMin) :
+                new ObjectParameter("noteMoyenneMin", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BigSearchBiens_Result>("BigSearchBiens", bbqParameter, piscineParameter, jacuzziParameter, saunaParameter, tvParameter, teleDisParameter, wifiParameter, pingpongParameter, tennisParameter, transatParameter, cuisineEqParameter, machineALaverParameter, jardinParameter, parkingParameter, nbSdbParameter, nbToiletteParameter, nbChambreParameter, prixMaxParameter, villeOuPaysParameter, nbPersMaxParameter, noteMoyenneMinParameter);
         }
     }
 }

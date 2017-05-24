@@ -352,6 +352,15 @@ namespace DreamHoliday {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Desole.
+        /// </summary>
+        public static string desole {
+            get {
+                return ResourceManager.GetString("desole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à détail du bien.
         /// </summary>
         public static string detailDuBien {
@@ -501,6 +510,15 @@ namespace DreamHoliday {
         public static string Error_SujetRequis {
             get {
                 return ResourceManager.GetString("Error_SujetRequis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à nous n&apos;avons pas de biens qui correspond à vos critères..
+        /// </summary>
+        public static string Error_tableVide {
+            get {
+                return ResourceManager.GetString("Error_tableVide", resourceCulture);
             }
         }
         
