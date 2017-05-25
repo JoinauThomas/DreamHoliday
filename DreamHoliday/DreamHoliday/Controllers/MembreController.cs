@@ -107,16 +107,13 @@ namespace DreamHoliday.Controllers
                     // ajout de l'user
                     bool ok = ajoutNewUser(nouveauMembre.mail, nouveauMembre.password1, nouveauMembre.password2);
 
-                    List<Membre> mesMembres = GetAllMembres();
+                    Membre moi = GetMembreByMail(nouveauMembre.mail);
+                    int idMembre = moi.idMembre;
 
-
-                    Membre aaa = mesMembres.Find(x => x.mail == nouveauMembre.mail);
-                    nouveauMembre.idMembre = aaa.idMembre;
                     if (monfichier != null && monfichier.ContentLength > 0)
                     {
-                        string path = Path.Combine(Server.MapPath("~/Img/membres"), "photo" + nouveauMembre.idMembre.ToString() + ".jpg");
+                        string path = Path.Combine(Server.MapPath("~/Img/membres"), "photo" + idMembre.ToString() + ".jpg");
                         monfichier.SaveAs(path);
-                        // ajouter le cours
                     }
                     return RedirectToAction("Index", "Home");
                 }
@@ -265,7 +262,7 @@ namespace DreamHoliday.Controllers
             List<Membre> mesMembres = new List<Membre>();
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:52858/api/BienAPI/");
+                client.BaseAddress = new Uri("http://localhost:52858/api/MembreAPI/");
                 var responseTask = client.GetAsync("GetAllMembres");
                 responseTask.Wait();
                 var result = responseTask.Result;

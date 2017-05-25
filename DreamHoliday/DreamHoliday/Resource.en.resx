@@ -464,10 +464,22 @@ We allow owners to safely rent their property ..</value>
   <data name="estNote" xml:space="preserve">
     <value>Is noted</value>
   </data>
+  <data name="annee" xml:space="preserve">
+    <value>year</value>
+  </data>
   <data name="desole" xml:space="preserve">
     <value>Sorry</value>
   </data>
   <data name="Error_tableVide" xml:space="preserve">
     <value>We do not have properties that matches your criteria.</value>
+  </data>
+  <data name="jour" xml:space="preserve">
+    <value>day</value>
+  </data>
+  <data name="mois" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="retour" xml:space="preserve">
+    <value>Return</value>
   </data>
 </root>

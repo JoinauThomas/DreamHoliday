@@ -79,6 +79,15 @@ namespace DreamHoliday {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à année.
+        /// </summary>
+        public static string annee {
+            get {
+                return ResourceManager.GetString("annee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à barbecue.
         /// </summary>
         public static string bbq {
@@ -613,6 +622,15 @@ namespace DreamHoliday {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à jour.
+        /// </summary>
+        public static string jour {
+            get {
+                return ResourceManager.GetString("jour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à les pièces.
         /// </summary>
         public static string lesPieces {
@@ -717,6 +735,15 @@ namespace DreamHoliday {
         public static string modifier {
             get {
                 return ResourceManager.GetString("modifier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à mois.
+        /// </summary>
+        public static string mois {
+            get {
+                return ResourceManager.GetString("mois", resourceCulture);
             }
         }
         
@@ -888,6 +915,15 @@ namespace DreamHoliday {
         public static string Rechercher {
             get {
                 return ResourceManager.GetString("Rechercher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Retour.
+        /// </summary>
+        public static string retour {
+            get {
+                return ResourceManager.GetString("retour", resourceCulture);
             }
         }
         

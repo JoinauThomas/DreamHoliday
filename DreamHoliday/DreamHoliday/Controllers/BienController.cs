@@ -92,6 +92,10 @@ namespace DreamHoliday.Controllers
             }
         }
 
+        public ActionResult EditBien(Bien monBien)
+        {
+            return View(monBien);
+        }
 
 
         // faire une recherche en fonction du lieux et des options
@@ -280,6 +284,13 @@ namespace DreamHoliday.Controllers
             return View(mesBiens);
         }
 
+        public ActionResult DetailMonBien(int idBien)
+        {
+            Bien monBien = GetBienWithId(idBien);
+
+            return View(monBien);
+        }
+
         [HttpGet]
         public ActionResult PostCommentAndNote(int idLoc)
         {
@@ -372,6 +383,7 @@ namespace DreamHoliday.Controllers
             }
             return (monBien);
         }
+
 
 
 

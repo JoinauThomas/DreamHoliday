@@ -301,6 +301,8 @@
       <DependentUpon>Resource.en.resx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Content Include="Views\Bien\DetailMonBien.cshtml" />
+    <Content Include="Views\Bien\EditBien.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

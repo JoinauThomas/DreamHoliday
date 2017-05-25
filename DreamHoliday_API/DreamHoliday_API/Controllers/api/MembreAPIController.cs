@@ -121,6 +121,10 @@ namespace DreamHoliday_API.Controllers.api
             DAL.DreamHollidayEntities dbContext = new DAL.DreamHollidayEntities();
             List<DAL.MEMBRE> mesMem = dbContext.MEMBRE.ToList();
             List<Membre> mesMembres = new List<Membre>();
+            foreach(var m in mesMem)
+            {
+                mesMembres.Add(new Membre { adresse = m.MEM_adresse, dateDeNaissance = m.MEM_dateDeNaissance, estProprietaire = m.MEM_propriétaire, idMembre = m.idMembre, mail = m.MEM_mail, nom = m.MEM_nom, photo = m.MEM_Photo, prenom = m.MEM_prenom, telephone = m.MEM_telephone });
+            }
 
             return mesMembres;
         }

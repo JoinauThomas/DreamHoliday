@@ -34,7 +34,11 @@ namespace DreamHoliday.Web.Controllers
             // Save culture in a cookie
             HttpCookie cookie = Request.Cookies["_culture"];
             if (cookie != null)
+            {
                 cookie.Value = culture; // update cookie value
+
+                
+            }
             else
             {
                 cookie = new HttpCookie("_culture");
